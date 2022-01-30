@@ -2429,3 +2429,39 @@ void MainWindow::on_actionEnglish_triggered()
 {
     HinFlag = 0 , SanFlag = 0;
 }
+
+void MainWindow::on_actionBold_triggered()
+{
+    ui -> textBrowser -> setFontWeight(QFont::Bold);
+}
+
+
+void MainWindow::on_actionUnBold_triggered()
+{
+    ui -> textBrowser -> setFontWeight(QFont::Normal);
+}
+
+
+void MainWindow::on_actionSubScript_triggered()
+{
+    QString text_selected = ui -> textBrowser -> textCursor().selectedText();
+    qint32 start_index = ui -> textBrowser -> textCursor().selectionStart();
+
+    ui -> textBrowser -> textCursor().removeSelectedText();
+    QString text_left = ui -> textBrowser -> toPlainText();
+    text_left.insert(start_index, "<sub>" + text_selected + "</sub>");
+    ui -> textBrowser -> setText(text_left);
+}
+
+
+void MainWindow::on_actionSuperScript_triggered()
+{
+    QString text_selected = ui -> textBrowser -> textCursor().selectedText();
+    qint32 start_index = ui -> textBrowser -> textCursor().selectionStart();
+
+    ui -> textBrowser -> textCursor().removeSelectedText();
+    QString text_left = ui -> textBrowser -> toPlainText();
+    text_left.insert(start_index, "<sup>" + text_selected + "</sup>");
+    ui -> textBrowser -> setText(text_left);
+}
+
