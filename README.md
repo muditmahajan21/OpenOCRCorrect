@@ -1,3 +1,25 @@
+### GNU/Linux and Qt version
+
+  - Compiled and Tested on Manjaro 21.2.2 with Qt 5.15.2.
+
+### What has been done?
+
+* A Text Formatting menu has been created.. 
+* Four QActions have been implemented for the following actions:
+    * Bold 
+    * Unbold
+    * Subscript
+    * SuperScript
+
+### Issues / Challenges ? 
+
+1. Subscript / SuperScript only modify the selected text and render the remaining text as plain text.
+
+### Features 
+
+1. Bold / unbold selected text.
+2. Subscript and superscript selected text.
+
 # OpenOCRCorrect
 A framework for assisting human while correcting the OCR errors in documents, mostly dedicated to Indian Languages.
 Tested on Sanskrit, Hindi, Marathi and English.
